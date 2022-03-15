@@ -2,7 +2,7 @@
 
 [**Project**](https://www.cs.cmu.edu/~dsnerf/) | [**Paper**](https://arxiv.org/abs/2107.02791) | [**YouTube**](https://youtu.be/84LFxCo7ogk)
 
-Pytorch implementation of our method for learning neural radiance fields that takes advantage of depth supervised by 3D point clouds. It can be used to train NeRF models given only very few input views.
+Pytorch implementation of DS-NeRF. DS-NeRF can improve the training of neural radiance fields by leveraging depth supervision derived from 3D point clouds. It can be used to train NeRF models given only very few input views.
 
 <p align="center">
   <img src="resources/DSNeRF_teaser_small.gif"  width="800" />
@@ -11,7 +11,7 @@ Pytorch implementation of our method for learning neural radiance fields that ta
 
 [Depth-supervised NeRF: Fewer Views and Faster Training for Free](https://www.cs.cmu.edu/~dsnerf/)
 
-arXiv 2107.02791, 2021
+CVPR, 2022
 
  [Kangle Deng](https://dunbar12138.github.io/)<sup>1</sup>,
  [Andrew Liu](https://andrewhliu.github.io/)<sup>2</sup>,
@@ -131,22 +131,27 @@ It will create an experiment directory in `./logs`, and store the checkpoints an
 You can create your own experiment configuration to try other datasets.
 
 
+### Use depth-supervised loss in your own project
+
+We provide a tutorial on how to use depth-supervised loss in your own project [here](resources/tutorial.md).
+
 ---
 
 ## Citation
 
 If you find this repository useful for your research, please cite the following work.
 ```
-@article{kangle2021dsnerf,
-  title={Depth-supervised NeRF: Fewer Views and Faster Training for Free},
-  author={Kangle Deng, Andrew Liu, Jun-Yan Zhu, and Deva Ramanan},
-  journal={arXiv preprint arXiv:2107.02791},
-  year={2021}
+@InProceedings{kangle2021dsnerf,
+    author    = {Deng, Kangle and Liu, Andrew and Zhu, Jun-Yan and Ramanan, Deva},
+    title     = {Depth-supervised {NeRF}: Fewer Views and Faster Training for Free},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022}
 }
 ```
 
 ---
 
-## Acknowlegements
+## Acknowledgments
 
 This code borrows heavily from [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch). We thank Takuya Narihira, Akio Hayakawa, Sheng-Yu Wang, and for helpful discussion. We are grateful for the support from Sony Corporation, Singapore DSTA, and the CMU Argo AI Center for Autonomous Vehicle Research.
